@@ -6,7 +6,7 @@
 
 For my final project, I will be building a personal blog, inspired by the blog of [Lee Robinson](https://leerob.io/), he is the VP of Developer Experience at [Vercel](https://vercel.com/), and also he is now leading the community for [Next.js](https://nextjs.org/). I like his blog a lot, it's simple, clean and easy to use. So I want to create a similar one to share my notes, articles, and thoughts on different topics related to web development, programming, and technology.
 
-I will not be 100% replicating his blog. I will remove some features, such as the commenting system, and I will add some functionalities to ensure that I can utilize as many react concepts I learned in our class as possible.
+> I will not be 100% replicating his blog. I will remove some features, such as the commenting system, and I will add some functionalities to ensure that I can utilize as many react concepts I learned in our class as possible.
 
 
 
@@ -61,4 +61,4 @@ I will not be 100% replicating his blog. I will remove some features, such as th
 
 Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-blog?type=design&node-id=0%3A1&mode=design&t=PjCbH9szgOEPbquU-1)
 
-![image-20230801141805850](C:\Users\benja\AppData\Roaming\Typora\typora-user-images\image-20230801141805850.png)
+![image-wireframe](./wireframe.png)
