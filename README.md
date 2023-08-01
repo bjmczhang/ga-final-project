@@ -1,3 +1,7 @@
+## Live Demo (not finished yet): https://bjmblog.vercel.app/
+
+
+
 # Project Proposal: Personal Markdown Blog
 
 
