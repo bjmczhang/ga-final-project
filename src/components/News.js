@@ -24,7 +24,7 @@ const News = () => {
 
   return (
     <div className="news grid-container">
-      <h3 className="section-title"> headlines today</h3>
+      <h3 className="section-title">tech headlines today</h3>
       {news.slice(0, 4).map((article, i) => (
         <a
           target="_blank"
