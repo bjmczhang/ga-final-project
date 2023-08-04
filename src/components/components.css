@@ -347,3 +347,34 @@ pre {
 .page-content ul li a {
   color: lightseagreen;
 }
+
+.article ul li {
+  list-style: disc;
+  margin-left: 4rem;
+}
+
+.article table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+}
+
+.article table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--light-gray);
+}
+
+.article table th {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--light-gray);
+  background: var(--dark-gray);
+  color: white;
+}
+
+.article table tr:nth-child(even) {
+  background: var(--extra-light-gray);
+}
+
+.article img {
+  width: 100%;
+}
