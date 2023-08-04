@@ -1,4 +1,4 @@
-## Live Demo (not finished yet): https://bjmblog.vercel.app/
+## Live Demo (not finished yet): https://bjmblog.netlify.app/
 
 
 

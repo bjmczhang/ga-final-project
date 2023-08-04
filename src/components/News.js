@@ -9,7 +9,7 @@ const News = () => {
   // https://newsapi.org/docs/endpoints/top-headlines
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/everything?language=en&pageSize=20&sortBy=publishedAt&q=coding&apiKey=${APIKey}`
+      `https://newsapi.org/v2/everything?language=en&pageSize=20&sortBy=publishedAt&q=coding&apiKey=a54bf6e3a5fc4042bcadc2059cf88b23`
     )
       .then((res) => res.json())
       .then((res) => {
