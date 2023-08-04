@@ -20,26 +20,33 @@ const PostList = () => {
     );
   };
 
-  console.log(selectedTags);
-
   const postMatchesSelectedTags = (post) => {
     if (selectedTags.length === 0) return true;
 
-    return post.tags.some((tag) => selectedTags.includes(tag));
+    const tagsArray = post.tags.split(",").map((tag) => tag.trim());
+    return tagsArray.some((tag) => selectedTags.includes(tag));
   };
 
-  const filteredPosts = postlist.filter(
-    (post) =>
-      (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.date.toLowerCase().includes(searchQuery.toLowerCase())) &&
-      postMatchesSelectedTags(post)
-  );
-  console.log(filteredPosts);
+  const parseCustomDate = (dateString) => {
+    const [day, month, year] = dateString.split("-");
+    // Months are 0-indexed in JavaScript Date objects, so we subtract 1 from the month value
+    return new Date(`${year}-${month - 1}-${day}`);
+  };
+
+  const filteredPosts = postlist
+    .filter(
+      (post) =>
+        (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.date.toLowerCase().includes(searchQuery.toLowerCase())) &&
+        postMatchesSelectedTags(post)
+    )
+    // Sort posts by date, from newest to oldest
+    .sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
 
   const availableTags = Array.from(
-    new Set(postlist.map((post) => post.tags.slice(1, -1).split(",")).flat())
+    new Set(postlist.map((post) => post.tags.split(",")).flat())
   );
   return (
     <div className="container postlist-container">
@@ -68,9 +75,7 @@ const PostList = () => {
               <div className="post-card" key={i}>
                 <Link to={`/post/${post.title}`} className="post-link">
                   <h2>{post.title}</h2>
-                  <small>
-                    Published on {post.date} by {post.author}
-                  </small>
+                  <small>Published on {post.date}</small>
                 </Link>
               </div>
             ))

@@ -2,7 +2,7 @@
 title: Hello All!
 author: Benjamin Zhang
 date: 30-07-2023
-tags: [html,css]
+tags: html,css
 selected: true
 ---
 
