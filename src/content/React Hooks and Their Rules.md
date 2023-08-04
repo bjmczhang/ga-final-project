@@ -11,10 +11,10 @@ selected: true
 
 👉 Special built-in functions that allow us to "hook" into React internals:
 
-		- Creating and accessing state from Fiber tree
-		- Registering side effects in Fiber tree
-		- Manual DOM selections
-		- Many more...
+- Creating and accessing state from Fiber tree
+- Registering side effects in Fiber tree
+- Manual DOM selections
+- Many more...
 
 > The Fiber tree is somewhere deep inside React, and usually not accessible to us. But using the useState or the useEffect hook, we can essentially hook into that internal mechanism.
 
@@ -28,7 +28,7 @@ selected: true
 
 ## Overview of All Built-in Hooks
 
-| MOST USED | LESS USED | ONLY FOR LIBRARIES |
+| MOST USED |     LESS USED |      ONLY FOR LIBRARIES |
 | ---- | ---- | ----|
 | ✅ useState | ➡️ useRef | ❌ useSyncExternalStore |
 | ✅ useEffect | ➡️ useCallback | ❌ useInsertonEffect |
@@ -58,4 +58,4 @@ selected: true
 
 
 
-![image-20230804215448826](C:\Users\benja\Desktop\My Projects\bjm-blog\public\assets\image-20230804215448826.png)
+![image-20230804215448826](/assets/image-20230804215448826.png)
