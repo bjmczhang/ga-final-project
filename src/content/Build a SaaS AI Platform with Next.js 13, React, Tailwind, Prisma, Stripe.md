@@ -50,3 +50,113 @@ npx shadcn-ui@latest init
 ```
 npx shadcn-ui@latest add button
 ```
+
+
+
+## Folder Setup
+
+##### 1. Set the height for HTML and body
+
+```
+// globals.css
+html,
+body,
+:root {
+  height: 100%;
+}
+```
+
+
+
+##### 2. Change title and description
+
+```
+// layout.tsx
+export const metadata: Metadata = {
+  title: "mAgIc",
+  description: "AI Platform",
+};
+```
+
+
+
+##### 3. Router Group
+
+> In the ==app== directory, nested folders are normally mapped to URL paths. However, you can mark a folder as a **Route Group** to prevent the folder from being included in the route's URL path.
+
+A route group can be created by wrapping a folder's name in parenthesis: ==(folderName)== 
+
+It's not affecting the URL, it's just a folder where we decided to keep our root page for easier structure.
+
+![Organizing Routes with Route Groups](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Froute-group-organisation.png&w=3840&q=75&dpl=dpl_7ds9ACTGgmRZXVhFUCG5vMyVUFKb)
+
+![image-20230805170517413](C:\Users\benja\Desktop\My Projects\bjm-blog\public\assets\image-20230805170517413.png)
+
+
+
+##### 4. Add authentication to our project
+
+- Shut down our application, so we don't have any hot reloading errors
+
+- Add authentication using clerk
+
+  - install @clerk/nextjs
+
+    ```
+    npm install @clerk/nextjs
+    ```
+
+  - set environment keys
+
+    ```
+    // .env.local
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=...
+    CLERK_SECRET_KEY=...
+    ```
+
+  - mount clerkprovider
+
+    ```
+    // app/layout.tsx
+    	...
+    import { ClerkProvider } from '@clerk/nextjs'
+    	...
+    return(
+    <ClerkProvider>
+    	<html>
+            <body>
+            ...
+            </body>
+    	</html>
+    </ClerkProvider>
+    )
+    ```
+
+  - create middleware.ts file
+
+    Now that Clerk is installed and mounted in your application, it’s time to decide which pages are public and which need to hide behind authentication. We do this by creating a ==middleware.ts== file at the root folder (or inside `src/` if that is how you set up your app).
+
+  - build sign in and sign up pages
+
+    Clerk offers a set of prebuilt components that you can use to embed sign in, sign up, and other user management functions into your Next.js application. 
+
+    ```
+    // app/sign-up/[[...sign-up]]/page.tsx
+    import { SignUp } from "@clerk/nextjs";
+    
+    export default function Page() {
+      return <SignUp />;
+    }
+    ```
+
+    ```
+    // app/sign-in/[[...sign-in]]/page.tsx
+    import { SignIn } from "@clerk/nextjs";
+    
+    export default function Page() {
+      return <SignIn />;
+    }
+    ```
+
+    
+
