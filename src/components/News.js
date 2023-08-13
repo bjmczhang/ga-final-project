@@ -6,14 +6,22 @@ const APIKey = process.env.REACT_APP_NEWS_API_KEY;
 const News = () => {
   const [news, setNews] = useState([]);
 
-  // https://mediastack.com/dashboard
+  // https://currentsapi.services/
   useEffect(() => {
-    fetch(`https://api.currentsapi.services/v1/latest-news?apiKey=${APIKey}`)
+    fetch(
+      `https://api.currentsapi.services/v1/latest-news?language=en&category=programming&apiKey=${APIKey}`
+    )
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res.news);
+        console.log(res.news);
         // Filter out articles with null image
-        const newsWithImages = res.news.filter((post) => post.image !== null);
+        const newsWithImages = res.news.filter(
+          (post) =>
+            post.image !== null &&
+            post.image !== "" &&
+            post.image !== undefined &&
+            post.image !== "None"
+        );
         setNews(newsWithImages);
       })
       .catch((err) => console.log(err));
