@@ -13,8 +13,8 @@ const SelectedList = () => {
         {selectedlist.length &&
           selectedlist.map((post, i) => {
             return (
-              <Link to={`/post/${post.title}`} className="post-link">
-                <div className="selected-card tag" key={i}>
+              <Link to={`/post/${post.title}`} className="post-link" key={i}>
+                <div className="selected-card tag">
                   <h3>{post.title}</h3>
                   <small>
                     Published on {post.date} by {post.author}

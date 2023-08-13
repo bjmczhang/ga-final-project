@@ -134,7 +134,7 @@ It's not affecting the URL, it's just a folder where we decided to keep our root
 
   - create middleware.ts file
 
-    Now that Clerk is installed and mounted in your application, it’s time to decide which pages are public and which need to hide behind authentication. We do this by creating a ==middleware.ts== file at the root folder (or inside `src/` if that is how you set up your app).
+    Now that Clerk is installed and mounted in your application, it’s time to decide which pages are public and which need to hide behind authentication. We do this by creating a ==middleware.ts== file at the root folder (or inside ==src/== if that is how you set up your app).
 
   - build sign in and sign up pages
 
@@ -158,5 +158,66 @@ It's not affecting the URL, it's just a folder where we decided to keep our root
     }
     ```
 
+  - update environment variables
+
+    add environment variables for the ==signIn== , ==signUp== and ==afterSignUp== , ==afterSignIn== paths:
+
+    ```
+    // .env.local
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+    ```
+
+    let clerk knows where to redirect us after we login or where to go in general for sign in and sign up
+
+  - add public route
+
+    ```
+    // middleware.ts
+    export default authMiddleware({
+      publicRoutes: ["/"],
+    });
+    ```
+
+  - styling sign-in and sign-out page
+
+    ```
+    // (auth)/layout.tsx
+    const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+      return (
+        <div className="flex items-center justify-center h-full">{children}</div>
+      );
+    };
+    
+    export default AuthLayout;
+    ```
+
+  - embed the <UserButton />
+
+    The ==<UserButton />== allows you to manage your account information and log out, thus allowing you to complete a full authentication circle.
+
+    ```
+    // (dashboard)/(routes)/dashboard/page.tsx
+    import { UserButton } from "@clerk/nextjs";
+    export default function DashboardPage() {
+      return (
+        <div>
+          <p>Dashboard Page (Protected)</p>
+          <UserButton afterSignOutUrl="/" />
+        </div>
+      );
+    }
+    
+    ```
+
     
 
+## Sidebar
+
+
+
+##### 1. create the layout for dashboard routes
+
+##### 2. create navbar components
