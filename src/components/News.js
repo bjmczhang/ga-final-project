@@ -8,12 +8,12 @@ const News = () => {
 
   // https://mediastack.com/dashboard
   useEffect(() => {
-    fetch(`http://api.mediastack.com/v1/news?access_key=${APIKey}`)
+    fetch(`https://api.currentsapi.services/v1/latest-news?apiKey=${APIKey}`)
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res.data);
+        // console.log(res.news);
         // Filter out articles with null image
-        const newsWithImages = res.data.filter((post) => post.image !== null);
+        const newsWithImages = res.news.filter((post) => post.image !== null);
         setNews(newsWithImages);
       })
       .catch((err) => console.log(err));
@@ -22,18 +22,18 @@ const News = () => {
   return (
     <div className="news grid-container">
       <h3 className="section-title">tech headlines today</h3>
-      {news.slice(0, 4).map((post, i) => (
+      {news.slice(0, 4).map((post) => (
         <a
           target="_blank"
           href={post.url}
           className="news-card grid-item"
-          key={i}
+          key={post.id}
         >
           <div className="image">
             <img src={post.image} alt={post.title} />
           </div>
           <div className="news-content">
-            <small>{post.published_at}</small>
+            <small>{post.published}</small>
             <h3>{post.title.split(" ").slice(0, 10).join(" ")} ...</h3>
             <p>{post.description.split(" ").slice(0, 10).join(" ")} ...</p>
           </div>
