@@ -1,6 +1,6 @@
 ## Live Demo:
 
-React Version: https://bjmblog.netlify.app/
+React Version: https://bjmblog.vercel.app/
 
 Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
 
