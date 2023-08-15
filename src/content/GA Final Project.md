@@ -1,3 +1,13 @@
+---
+title: Creating A Markdown Blog With React
+date: 14-08-2023
+author: Benjamin Zhang
+tags: react,project
+selected: true
+---
+
+
+
 # Creating A Markdown Blog With React
 
 > GA Final Project Presentation		                                                                                                                            ——*Benjamin Zhang*

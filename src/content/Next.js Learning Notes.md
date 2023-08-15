@@ -1,3 +1,15 @@
+---
+title: Next.js Learning Notes
+date: 13-08-2023
+author: Benjamin Zhang
+tags: nextjs
+selected: true
+---
+
+
+
+
+
 # Introduction
 
 
