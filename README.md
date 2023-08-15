@@ -2,10 +2,7 @@
 
 React Version: https://bjmblog.vercel.app/
 
-
-
 Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
-
 
 # Project Proposal: Personal Markdown Blog
 
@@ -62,41 +59,19 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
 
 ![image-wireframe](./wireframe.png)
 
-
-
-
-
-<<<<<<< HEAD
--------------------------------------------------------------------------------------------------------------
-=======
-----------------------------------------------------------------------------------------------------------------------------------------------------
->>>>>>> e070520d86a9635694d90bbc16a02ba2fbfe3720
-
-
-
-
-
-
-
-
-
 # Creating A Markdown Blog With React
 
-> GA Final Project Presentation		                                                                                                                            ——*Benjamin Zhang*
-
-
+> GA Final Project Presentation ——_Benjamin Zhang_
 
 ## Project Intro
 
 - Markdown Blog built **without** any platform/headless CMS.
 - Pure logic for turning markdown files to data.
-- Visit live application: [**bjmblog.vercel.app** ](https://bjmblog.vercel.app/) &  
-
-
+- Visit live application: [**bjmblog.vercel.app** ](https://bjmblog.vercel.app/) &
 
 ## Tech stack
 
-- **The First Version** (this presentation will primarily be based on this version) 
+- **The First Version** (this presentation will primarily be based on this version)
   - React
   - react-router-dom
   - markdown-to-jsx
@@ -108,13 +83,12 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
   - next-mdx-remote
   - Vercel
 
-
-
 ## App Structures & Features
 
 <img src="src\assets\image-20230814223937565.png" alt="image-20230814223937565" style="zoom: 33%;" />
 
 - **Layout**
+
   - header with nav links
   - footer
 
@@ -133,8 +107,6 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
   - personal info
 - **Not Found Page**
 
-
-
 ## Challenges
 
 - **fetch markdown content**
@@ -144,8 +116,8 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
   ```jsx
   const path = require("path");
   const fs = require("fs").promises;
-  
-  const dirPath = path.join(__dirname, "../src/content"); 
+
+  const dirPath = path.join(__dirname, "../src/content");
   const dirPathPages = path.join(__dirname, "../src/pages/content");
   ```
 
@@ -159,7 +131,7 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
       metadata.forEach((line) => {
         obj[line.split(":")[0].trim()] = line.split(":")[1].trim();
       });
-      return obj; 
+      return obj;
     }
   };
   ```
@@ -189,7 +161,7 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
             const metadataIndices = lines.reduce(getMetadataIndices, []);
             const metadata = parseMetadata({ lines, metadataIndices });
             const content = parseContent({ lines, metadataIndices });
-  
+
             let post = {
               id: i + 1,
               title: metadata.title || "No Title Given",
@@ -205,9 +177,9 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
           }
         })
       );
-  
+
       postlist = postlist.filter((post) => post !== null);
-  
+
       let data = JSON.stringify(postlist);
       await fs.writeFile("src/posts.json", data);
     } catch (err) {
@@ -232,7 +204,7 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
   import { useParams } from "react-router-dom";
   import postArticle from "../posts.json";
   import Markdown from "markdown-to-jsx";
-  
+
   const params = useParams();
   const article = postArticle.find((post) => post.title === params.slug);
   ...
@@ -243,21 +215,19 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
 
   ```jsx
   import postlist from "../posts.json";
-  
-  const filteredPosts = postlist
-      .filter(
-        (post) =>
-          (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.date.toLowerCase().includes(searchQuery.toLowerCase())) &&
-          postMatchesSelectedTags(post)
-      )
-      // Sort posts by date, from newest to oldest
-      .sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
-  ```
 
-  
+  const filteredPosts = postlist
+    .filter(
+      (post) =>
+        (post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.date.toLowerCase().includes(searchQuery.toLowerCase())) &&
+        postMatchesSelectedTags(post)
+    )
+    // Sort posts by date, from newest to oldest
+    .sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
+  ```
 
 # Conclusion
 
