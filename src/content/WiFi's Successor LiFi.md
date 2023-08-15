@@ -2,7 +2,7 @@
 title: WiFi's Successor - LiFi
 date: 4-08-2023
 tags:  internet 
-selected: true
+selected: false
 ---
 
 In June this year, the IEEE (Institute of Electrical and Electronics Engineers) approved the 802.11bb standard, which is a communication protocol for **Light Fidelity (LiFi)**. LiFi enables internet access through light, and the "L" in LiFi stands for Light.
