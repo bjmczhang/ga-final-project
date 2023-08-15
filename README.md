@@ -1,21 +1,18 @@
 ## Source Files and Live Demos:
 
-React Version: 
+**React** Version: 
 
 https://github.com/bjmczhang/ga-final-project
 
 https://bjmblog.vercel.app/
 
-<<<<<<< HEAD
-Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
-=======
 
-Next.js+Tailwind Version: 
+**Next.js+Tailwind** Version: 
 
 https://github.com/bjmczhang/nextjs-blog
 
 https://bjmblog-nextjs.vercel.app
->>>>>>> c3a4c096496cc4546eb479356497ad419f045f30
+
 
 # Project Proposal: Personal Markdown Blog
 
@@ -72,12 +69,6 @@ Figma link: [click here](https://www.figma.com/file/VsE5BeDWc1Afq3sXNPsa4r/bjm-b
 
 ![image-wireframe](./wireframe.png)
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> c3a4c096496cc4546eb479356497ad419f045f30
 # Creating A Markdown Blog With React
 
 > GA Final Project Presentation ——_Benjamin Zhang_
