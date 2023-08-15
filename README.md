@@ -1,10 +1,13 @@
-## Live Demo:
+## Source Files and Live Demos:
 
-React Version: https://bjmblog.vercel.app/
+React Version: 
+https://github.com/bjmczhang/ga-final-project/tree/master
+https://bjmblog.vercel.app/
 
 
-
-Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
+Next.js+Tailwind Version: 
+https://github.com/bjmczhang/nextjs-blog
+https://bjmblog-nextjs.vercel.app
 
 
 # Project Proposal: Personal Markdown Blog
