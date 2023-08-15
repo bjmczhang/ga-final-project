@@ -40,7 +40,7 @@ selected: true
 
 ## App Structures & Features
 
-<img src="C:\Users\benja\Desktop\My Projects\bjm-blog\public\assets\image-20230814223937565.png" alt="image-20230814223937565" style="zoom: 33%;" />
+<img src="\assets\image-20230814223937565.png" alt="image-20230814223937565" style="zoom: 33%;" />
 
 - **Layout**
   - header with nav links
