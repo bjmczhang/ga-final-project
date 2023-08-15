@@ -8,7 +8,7 @@ selected: true
 
 
 
-# Creating A Markdown Blog With React
+
 
 > GA Final Project Presentation		                                                                                                                            ——*Benjamin Zhang*
 
