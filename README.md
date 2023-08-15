@@ -2,7 +2,11 @@
 
 React Version: https://bjmblog.vercel.app/
 
+<<<<<<< HEAD
 Next.js+Tailwind Version: http://bjmblog-nextjs.vercel.app
+=======
+Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
+>>>>>>> fca820efecc42a2c584a5337b75b5913f6e37594
 
 # Project Proposal: Personal Markdown Blog
 
