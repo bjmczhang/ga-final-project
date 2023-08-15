@@ -2,7 +2,7 @@
 
 React Version: 
 
-https://github.com/bjmczhang/ga-final-project/tree/master
+https://github.com/bjmczhang/ga-final-project
 
 https://bjmblog.vercel.app/
 
