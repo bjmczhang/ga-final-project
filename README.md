@@ -1,12 +1,10 @@
 ## Live Demo:
 
 React Version: https://bjmblog.vercel.app/
-<<<<<<< HEAD
-Next.js+Tailwind Version: http://bjmblog-nextjs.vercel.app
-=======
+
+
 
 Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
->>>>>>> e070520d86a9635694d90bbc16a02ba2fbfe3720
 
 
 # Project Proposal: Personal Markdown Blog
