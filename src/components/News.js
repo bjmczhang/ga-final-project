@@ -14,7 +14,7 @@ const News = () => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res.news);
-        // Filter out articles with null image
+        // Filter articles with image
         const newsWithImages = res.news.filter(
           (post) =>
             post.image !== null &&

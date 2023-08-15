@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import postArticle from "../posts.json";
-// import ReactMarkdown from "react-markdown";
 import Markdown from "markdown-to-jsx";
 import Code from "./Code";
 

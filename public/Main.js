@@ -1,9 +1,12 @@
 const path = require("path");
 const fs = require("fs").promises;
 
-const dirPath = path.join(__dirname, "../src/content");
+const dirPath = path.join(__dirname, "../src/content"); // __dirname is a global variable in Node.js that represents the path of the directory where the current module is located.
 const dirPathPages = path.join(__dirname, "../src/pages/content");
 
+console.log(dirPath);
+
+// Iterate through an array of lines, find lines that start with "---", and collect their indices in an accumulator.
 const getMetadataIndices = (acc, elem, i) => {
   if (/^---/.test(elem)) {
     acc.push(i);
@@ -11,6 +14,7 @@ const getMetadataIndices = (acc, elem, i) => {
   return acc;
 };
 
+// extracting metadata from the Markdown files
 const parseMetadata = ({ lines, metadataIndices }) => {
   if (metadataIndices.length > 0) {
     let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1]);
@@ -18,10 +22,11 @@ const parseMetadata = ({ lines, metadataIndices }) => {
     metadata.forEach((line) => {
       obj[line.split(":")[0].trim()] = line.split(":")[1].trim();
     });
-    return obj;
+    return obj; // extracted metadata key-value pairs are returned as an object
   }
 };
 
+// extracting content from the Markdown files
 const parseContent = ({ lines, metadataIndices }) => {
   if (metadataIndices.length > 0) {
     let content = lines.slice(metadataIndices[1] + 1);
