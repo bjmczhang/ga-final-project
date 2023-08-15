@@ -1,7 +1,8 @@
 ## Live Demo:
 
 React Version: https://bjmblog.netlify.app/
-Next.js+Tailwind Version: [bjmblog-nextjs.vercel.app]()
+
+Next.js+Tailwind Version: https://bjmblog-nextjs.vercel.app
 
 # Project Proposal: Personal Markdown Blog
 
