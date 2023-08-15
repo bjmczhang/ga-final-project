@@ -12,7 +12,7 @@ selected: true
 
 - Markdown Blog built **without** any platform/headless CMS.
 - Pure logic for turning markdown files to data.
-- Visit live application: [**bjmblog.vercel.app** ](https://bjmblog.vercel.app/) & [**bjmblog-nextjs.vercel.app**]()
+- Visit live application: [**bjmblog.vercel.app** ](https://bjmblog.vercel.app/) & [**bjmblog-nextjs.vercel.app**](https://bjmblog-nextjs.vercel.app/)
 
 ## Tech stack
 
