@@ -26,9 +26,9 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Select the iPhone 13 Pro Max – 1.
 - Add a 4-column grid with a margin of 25.
 
-![image-20230819145902425](\assets\image-20230819145902425.png)
+![image-20230819145902425](/assets/image-20230819145902425.png)
 
-![image-20230819150350239](\assets\image-20230819150350239.png)
+![image-20230819150350239](/assets/image-20230819150350239.png)
 
 
 
@@ -36,7 +36,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 
 - Construct a content block guide, using basic rectangles for each block.
 
-![image-20230819151233779](\assets\image-20230819151233779.png)
+![image-20230819151233779](/assets/image-20230819151233779.png)
 
 
 
@@ -44,7 +44,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 
 - Move these guides out of the frame.
 
-![image-20230819151429162](\assets\image-20230819151429162.png)
+![image-20230819151429162](/assets/image-20230819151429162.png)
 
 
 
@@ -53,7 +53,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Reduce the width of the guide rectangles. 
 - Keep the text as this provides a rough outline of all the content in the wireframe. You will use it as a reference while designing within the frame.  
 
-![image-20230819151531139](\assets\image-20230819151531139.png)
+![image-20230819151531139](/assets/image-20230819151531139.png)
 
 
 
@@ -70,7 +70,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 
 **Note:** Images are represented as a rectangle with an x through it.  
 
-![image-20230819152008345](\assets\image-20230819152008345.png)
+![image-20230819152008345](/assets/image-20230819152008345.png)
 
 
 
@@ -79,7 +79,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Add a placement for an image of a dish as a rectangle with an x through it.
 - And add a placement for the back button so users can return to the previous page.
 
-![image-20230819152305200](\assets\image-20230819152305200.png)
+![image-20230819152305200](/assets/image-20230819152305200.png)
 
 
 
@@ -90,7 +90,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 
 **Note:** The wireframe does not have to include details at this point but is added here for demonstrative purposes. 
 
-![image-20230819152747113](\assets\image-20230819152747113.png)
+![image-20230819152747113](/assets/image-20230819152747113.png)
 
 
 
@@ -100,7 +100,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Add a general time for delivery.
 - Add a drop-down menu should a customer require another time for delivery.      
 
-![image-20230819153518860](\assets\image-20230819153518860.png)
+![image-20230819153518860](/assets/image-20230819153518860.png)
 
 
 
@@ -109,7 +109,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Add text to inform the user that they can add items to their dish.
 - List the options and price.  
 
-![image-20230819154216592](\assets\image-20230819154216592.png)
+![image-20230819154216592](/assets/image-20230819154216592.png)
 
 
 
@@ -117,7 +117,7 @@ Write down or sketch out what you require to go on to the page, such as the:
 
 -  Add a plus and minus so users can add or subtract the number of the dish they want to order.  
 
-![image-20230819154553555](\assets\image-20230819154553555.png)
+![image-20230819154553555](/assets/image-20230819154553555.png)
 
 
 
@@ -126,4 +126,4 @@ Write down or sketch out what you require to go on to the page, such as the:
 - Finally, add a button so users can tap to add a dish to their order. 
 - And add a text placement displaying the total amount of the dish within this button.  
 
-![image-20230819154839099](\assets\image-20230819154839099.png)
+![image-20230819154839099](/assets/image-20230819154839099.png)
