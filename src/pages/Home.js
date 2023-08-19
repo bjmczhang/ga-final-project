@@ -12,8 +12,10 @@ const Home = () => {
       <div className="home container page-content">
         <h2 className="title">Benjamin Zhang</h2>
         <em>Future Full-Stack Developer</em>
+        <div className="avatar-image">
+          <img src="./assets/avatar.png" alt="Avatar" />
+        </div>
         <p>
-          {" "}
           Hey there! 👋 I'm Ben, a former designer who, after a few years of
           pixel pushing, realized that coding is my true passion. I absolutely
           love coding! You can read more about me here:{" "}
@@ -21,6 +23,7 @@ const Home = () => {
             <ReadMoreIcon /> about me
           </Link>
         </p>
+
         <News />
         <p>
           As a developer, staying abreast of the latest technology trends,

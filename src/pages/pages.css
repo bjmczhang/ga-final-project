@@ -59,3 +59,16 @@
 .notfound a:hover {
   color: var(--dark-gray);
 }
+
+.home .avatar-image {
+  float: right;
+  margin-left: 5rem;
+}
+
+.home .avatar-image img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(50%);
+}
