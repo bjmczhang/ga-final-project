@@ -199,6 +199,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 753px) {
+  .news-card.grid-item {
+    flex-basis: 100%;
+  }
+}
+
 .news .image {
   flex: 2;
 }
